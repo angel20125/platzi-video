@@ -3,61 +3,82 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Muli&display=swap"
+      rel="stylesheet"
+    />
     <title>Platzi Video</title>
   </head>
   <style>
     body {
-      font-family: Arial, Helvetica, sans-serif;
       margin: 0px;
+      font-family: "Muli", sans-serif;
       background-color: #ab88ff;
     }
-
     .header {
+      background-color: #ab88ff;
       width: 100%;
       height: 80px;
-      background-color: #ab88ff;
-    }
-
-    .header__img {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px;
       margin: 0px;
+    }
+    .header__img {
       width: 200px;
       margin-top: 10px;
       margin-left: 10px;
-      border: 1px solid #43d8c9;
+      /*for debug*/
+      /* border: 1px solid #43d8c9; */
     }
-
     .header__menu {
       margin-right: 30px;
       /*for debug*/
-      border: 1px solid #43d8c9;
+      /* border: 1px solid #43d8c9; */
     }
-
     .header__menu ul {
-      /* display: none; */
+      display: none;
       list-style: none;
       padding: 0px;
-      /*It is useful to position in relation to the father*/
       position: absolute;
       width: 100px;
-      /*Is it useful to position text*/
       text-align: right;
       margin: 0px 0px 0px -14px;
       /*for debug*/
-      border: 1px solid #43d8c9;
+      /* border: 1px solid #43d8c9; */
     }
-
+    .header__menu:hover ul,
+    ul:hover {
+      display: block;
+    }
+    .header__menu li {
+      margin: 10px 0px;
+    }
+    .header__menu li a {
+      color: white;
+      text-decoration: none;
+    }
+    .header__menu li a:hover {
+      text-decoration: underline;
+    }
     .header__menu--profile {
       margin-right: 8px;
-      width: 40px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
       /*for debug*/
-      border: 1px solid #43d8c9;
+      /* border: 1px solid #43d8c9; */
     }
-
     .header__menu--profile img {
+      margin-right: 8px;
       width: 40px;
+    }
+    .header__menu--profile p {
+      margin: 0px;
+      color: white;
     }
   </style>
-
   <body>
     <header class="header">
       <img
@@ -65,16 +86,14 @@
         src="img/logo-platzi-video.png"
         alt="Logo-PlatziVideo"
       />
-
       <div class="header__menu">
         <div class="header__menu--profile">
           <img src="./img/img-user.png" alt="imagen-user" />
           <p>perfil</p>
         </div>
-
         <ul>
-          <li><a href="/.">Cuenta</a></li>
-          <li><a href="/.">Cerrar sesión</a></li>
+          <li><a href="/">Cuenta</a></li>
+          <li><a href="/">Cerrar sesión</a></li>
         </ul>
       </div>
     </header>
